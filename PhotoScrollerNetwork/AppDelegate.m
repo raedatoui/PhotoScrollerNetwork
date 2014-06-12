@@ -58,7 +58,7 @@ AppDelegate *appDelegate;
 	pvc.isWebTest = NO; //useInternet.on;
 	pvc.decoder = 2; //technology.selectedSegmentIndex;
 	pvc.justDoOneImage = NO; //justOneImage.on;
-	pvc.orientation = 1; //[orientationValue.text integerValue];
+	pvc.orientation = 2; //[orientationValue.text integerValue];
 //    pvc.singleName = @"timeflake";
     self.window.rootViewController = pvc;
     // Override point for customization after application launch.
