@@ -187,7 +187,7 @@ static uint64_t DeltaMAT(uint64_t then, uint64_t now);
 - (void)viewDidLoad 
 {
 	[spinner startAnimating];
-   
+    [[self view] setBackgroundColor:[UIColor blackColor]];
 	pagingScrollView = (UIScrollView *)self.view;
     pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
 
