@@ -154,7 +154,7 @@ static uint64_t DeltaMAT(uint64_t then, uint64_t now);
 				
 				for(int i=2; i<5; ++i) {
 					UIBarButtonItem *item = [toolbar.items objectAtIndex:i];
-					UIActivityIndicatorView *spnr = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+					UIActivityIndicatorView *spnr = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleRed];
 					item.customView = spnr;
 					[spnr startAnimating];
 				}
@@ -186,6 +186,7 @@ static uint64_t DeltaMAT(uint64_t then, uint64_t now);
 
 - (void)viewDidLoad 
 {
+    [spinner setColor:[UIColor whiteColor]];
 	[spinner startAnimating];
     [[self view] setBackgroundColor:[UIColor blackColor]];
 	pagingScrollView = (UIScrollView *)self.view;
