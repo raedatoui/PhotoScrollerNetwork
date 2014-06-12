@@ -36,7 +36,7 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #import "AppDelegate.h"
-
+#import "PhotoViewController.h"
 #import "ViewController.h"
 
 AppDelegate *appDelegate;
@@ -53,13 +53,24 @@ AppDelegate *appDelegate;
 	appDelegate = self;
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    PhotoViewController *pvc = [[PhotoViewController alloc] initWithNibName:@"PhotoViewController" bundle:nil];
+	pvc.isWebTest = NO; //useInternet.on;
+	pvc.decoder = 2; //technology.selectedSegmentIndex;
+	pvc.justDoOneImage = NO; //justOneImage.on;
+	pvc.orientation = 1; //[orientationValue.text integerValue];
+//    pvc.singleName = @"timeflake";
+    self.window.rootViewController = pvc;
     // Override point for customization after application launch.
-	vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+//	vc = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 	
-	self.viewController = [[UINavigationController alloc] initWithRootViewController:vc];
+//	self.viewController = [[UINavigationController alloc] initWithRootViewController:pvc];
 	
-	self.window.rootViewController = self.viewController;
+//	self.window.rootViewController = self.viewController;
+    
     [self.window makeKeyAndVisible];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
     return YES;
 }
 

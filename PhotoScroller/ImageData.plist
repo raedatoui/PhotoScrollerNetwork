@@ -4,15 +4,11 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>Lake</string>
+		<string>timeflake</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Shed</string>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>Tree</string>
+		<string>generator-cell-5</string>
 	</dict>
 </array>
 </plist>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8F566BA4-5B04-405B-836A-F67D5F62CEB2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PhotoScrollerNetwork</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>320AC851-5408-4C37-9B50-DE9E02D24F8A</key>
+		<string>ssh://github.com/raedatoui/PhotoScrollerNetwork.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PhotoScrollerNetwork.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>320AC851-5408-4C37-9B50-DE9E02D24F8A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/raedatoui/PhotoScrollerNetwork.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>320AC851-5408-4C37-9B50-DE9E02D24F8A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>320AC851-5408-4C37-9B50-DE9E02D24F8A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhotoScrollerNetwork</string>
+		</dict>
+	</array>
+</dict>
+</plist>

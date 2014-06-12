@@ -99,7 +99,7 @@
 {
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"Shed" ofType:@"jpg"];
 	assert(path);
-	
+	NSLog(@"WTFFF");
 	// 320 just shows we don't need to size it to what our desired size is
 	TiledImageBuilder *tb = [[TiledImageBuilder alloc] initWithImagePath:path withDecode:cgimageDecoder size:CGSizeMake(320, 320) orientation:1];
 	assert(tb);

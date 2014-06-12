@@ -195,6 +195,7 @@ static uint64_t DeltaMAT(uint64_t then, uint64_t now);
     recycledPages = [[NSMutableSet alloc] init];
     visiblePages  = [[NSMutableSet alloc] init];
 	tileBuilders  = [[NSMutableArray alloc] init];
+    
 	if(isWebTest) {
 		[self fetchWebImages];
 	} else {
@@ -205,6 +206,11 @@ static uint64_t DeltaMAT(uint64_t then, uint64_t now);
 	UITapGestureRecognizer *tgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(userDidTap:)];
 	[pagingScrollView addGestureRecognizer:tgr];
 #endif
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 - (void)dealloc
@@ -265,12 +271,19 @@ static uint64_t DeltaMAT(uint64_t then, uint64_t now);
 	dispatch_queue_t que = dispatch_queue_create("com.dfh.PhotoScroller", DISPATCH_QUEUE_SERIAL);
 
 	NSUInteger multiCore = [[NSProcessInfo processInfo] processorCount] - 1;
-	NSArray *imageArray;
+    NSMutableArray *imageArray = [NSMutableArray array];
 	
 	 if([self imageCount] == 1) {
-		imageArray = [NSArray arrayWithObject:singleName];
+		imageArray = [NSMutableArray arrayWithObject:singleName];
 	} else {
-		imageArray = [NSArray arrayWithObjects:@"Lake", @"Shed", @"Tree", nil];
+        for(NSUInteger idx=0; idx< [[self imageData] count]; ++idx) {
+            NSDictionary *data = [[self imageData] objectAtIndex:idx];
+             NSString *name = nil;
+            name = [data valueForKey:@"name"];
+            [imageArray addObject:name];
+            ////[NSArray arrayWithObjects:@"Lake", @"Shed", @"Tree", nil];
+        }
+        
 	}
 
 	for(NSUInteger idx=0; idx<[imageArray count]; ++idx) {
